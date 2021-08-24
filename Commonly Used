@@ -1,0 +1,24 @@
+//Filter Array
+var itemColl=list.filter(value => value.form == "Legacy Systems");//It will return array
+var itemIndex=list.filter(value => value.form == "Legacy Systems")[0];//Return Item Index
+
+//Filter Unique value in array
+this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val,id,array) => array.indexOf(val) == id)},()=>{
+   console.log(this.state.AllItemsToDisplayUnique)
+})
+
+//Push item in an array
+let { AllItemsToDisplay } = this.state;
+AllItemsToDisplay.push('Claims System');
+
+//Check if item exists
+if(this.state.AllClaimsSystemDefaultItem.indexOf(item) > -1){
+let { AllItemsToDisplay } = this.state;
+AllItemsToDisplay.push('Claims System ID Request');
+}
+
+//Iterate array
+{this.state.AllItemsToDisplayUnique.map((item,index)=>{
+  return <li>{item}</li>
+  })
+}
