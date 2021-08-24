@@ -2,10 +2,18 @@
 var itemColl=list.filter(value => value.form == "Legacy Systems");//It will return array
 var itemIndex=list.filter(value => value.form == "Legacy Systems")[0];//Return Item Index
 
+//Filter Array conditional load Component
+let formToLoad =['Item1','Item2','Item3']
+{formList.includes("Item1") && (<Item1Component/>)}
+{formList.includes("Item2") && (<Item2Component/>)}
+
 //Filter Unique value in array
 this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val,id,array) => array.indexOf(val) == id)},()=>{
    console.log(this.state.AllItemsToDisplayUnique)
 })
+
+//Ternary Operators
+{this.state.components== 'Item1' ? <Item1Component/> : <Item2Component/>}
 
 //Push item in an array
 let { AllItemsToDisplay } = this.state;
