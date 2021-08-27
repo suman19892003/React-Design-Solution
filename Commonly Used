@@ -15,9 +15,13 @@ this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val
 //Ternary Operators
 {this.state.components== 'Item1' ? <Item1Component/> : <Item2Component/>}
 
-//Push item in an array
+//Push item in an array as string
 let { AllItemsToDisplay } = this.state;
 AllItemsToDisplay.push('Claims System');
+
+//Push item in an array as object multidimensional
+let { FileDataCollArray } = this.state;
+FileDataCollArray.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
 
 //Check if item exists
 if(this.state.AllClaimsSystemDefaultItem.indexOf(item) > -1){
@@ -25,7 +29,7 @@ let { AllItemsToDisplay } = this.state;
 AllItemsToDisplay.push('Claims System ID Request');
 }
 
-//Iterate array
+//Iterate array map
 {this.state.AllItemsToDisplayUnique.map((item,index)=>{
   return <li>{item}</li>
   })
