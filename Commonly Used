@@ -23,6 +23,14 @@ AllItemsToDisplay.push('Claims System');
 let { FileDataCollArray } = this.state;
 FileDataCollArray.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
 
+//Remove Item from an array
+var array = [...this.state.people]; // make a separate copy of the array
+  var index = array.indexOf(e.target.value)
+  if (index !== -1) {
+    array.splice(index, 1);
+    this.setState({people: array});
+  }
+
 //Check if item exists
 if(this.state.AllClaimsSystemDefaultItem.indexOf(item) > -1){
 let { AllItemsToDisplay } = this.state;
