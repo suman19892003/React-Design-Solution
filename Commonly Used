@@ -23,6 +23,9 @@ AllItemsToDisplay.push('Claims System');
 let { FileDataCollArray } = this.state;
 FileDataCollArray.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
 
+//Copy item from one array to another array
+var array = [...this.state.people];
+
 //Remove Item from an array
 var array = [...this.state.people]; // make a separate copy of the array
   var index = array.indexOf(e.target.value)
