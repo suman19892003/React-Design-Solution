@@ -12,6 +12,11 @@ this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val
    console.log(this.state.AllItemsToDisplayUnique)
 })
 
+//Filter Unique Value between two array
+let allUser=this.state.allUserTypedColl;
+let allListItem:any=this.state.allListItems;
+var filteredArray=allUser.filter(item1 => allListItem.find(item2 => item1 === item2))
+
 //Ternary Operators
 {this.state.components== 'Item1' ? <Item1Component/> : <Item2Component/>}
 
