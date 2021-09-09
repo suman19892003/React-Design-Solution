@@ -25,8 +25,15 @@ let { AllItemsToDisplay } = this.state;
 AllItemsToDisplay.push('Claims System');
 
 //Push item in an array as object multidimensional
-let { FileDataCollArray } = this.state;
-FileDataCollArray.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
+let { itemColl } = this.state;
+itemColl.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
+
+Or It can also be defined as below(It will push item to the existing array)
+var array = [...this.state.itemColl];
+file.map((item)=>{
+array.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});       
+}) 
+this.setState({ itemColl: array });
 
 //Copy item from one array to another array
 var array = [...this.state.people];
