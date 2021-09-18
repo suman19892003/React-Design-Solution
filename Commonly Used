@@ -44,6 +44,12 @@ array.push({FileName:item.File.Name,FileURL:item.FileRef,ItemID:item.ID});
 }) 
 this.setState({ itemColl: array });
 
+
+//Set State in Array
+const uniqueTags = [];
+uniqueTags.push(img.text)
+this.setState({ProductCategoryColl:[...uniqueTags]})
+
 //Copy item from one array to another array
 var array = [...this.state.people];
 
