@@ -12,6 +12,15 @@ this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val
    console.log(this.state.AllItemsToDisplayUnique)
 })
 
+//Filter Unique Values in Array 2nd approach
+var images = [{"id": 1,"tag": "people"}, {"id": 2,"tag": "places"}, {"id": 3,"tag": "places"}]
+const uniqueTags = [];
+  res.map(img => {
+  if (uniqueTags.indexOf(img.tag) === -1) {
+     uniqueTags.push(img.tag)
+  }
+  });
+
 //Filter Unique Value between two array
 let allUser=this.state.allUserTypedColl;
 let allListItem:any=this.state.allListItems;
