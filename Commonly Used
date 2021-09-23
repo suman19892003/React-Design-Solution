@@ -72,3 +72,8 @@ AllItemsToDisplay.push('Claims System ID Request');
   return <li>{item}</li>
   })
 }
+
+//Pass parameter to other component in Route link
+import { Route, Link, Switch, HashRouter } from 'react-router-dom';
+<Route path="/NewPage" render={(props)=>{<NewPage2 details='detail for child comp' {...props}/>}}/>
+<Link to='/NewPage'>Next</Link>
