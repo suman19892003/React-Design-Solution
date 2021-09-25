@@ -77,3 +77,7 @@ AllItemsToDisplay.push('Claims System ID Request');
 import { Route, Link, Switch, HashRouter } from 'react-router-dom';
 <Route path="/NewPage" render={(props)=>{<NewPage2 details='detail for child comp' {...props}/>}}/>
 <Link to='/NewPage'>Next</Link>
+
+//Apply inline CSS to HTML React element
+<button style={{color:'black',margin:'auto'}}>Submit</button>
+
