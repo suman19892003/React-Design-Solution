@@ -60,6 +60,14 @@ var array = [...this.state.people]; // make a separate copy of the array
     array.splice(index, 1);
     this.setState({people: array});
   }
+  
+//clear or Empty an array
+var ar = [1, 2, 3, 4, 5, 6];
+ar.length = 0; // Output []
+
+//Remove a range of elements from an array.
+var list = ["bar", "baz", "foo", "qux"];    
+list.splice(0, 2); // Starting at index position 0, remove two elements ["bar", "baz"] and retains ["foo", "qux"].
 
 //Check if item exists
 if(this.state.AllClaimsSystemDefaultItem.indexOf(item) > -1){
