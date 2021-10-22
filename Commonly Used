@@ -89,3 +89,9 @@ import { Route, Link, Switch, HashRouter } from 'react-router-dom';
 //Apply inline CSS to HTML React element
 <button style={{color:'black',margin:'auto'}}>Submit</button>
 
+//Confirmation alert box
+window.confirm('Are you sure you wish to delete this item?') ? confirmMethod() : CancelMethod()
+
+//Plain Redirect
+window.location.href='https://myUrl.com'
+
