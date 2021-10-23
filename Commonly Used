@@ -92,6 +92,12 @@ import { Route, Link, Switch, HashRouter } from 'react-router-dom';
 //Confirmation alert box
 window.confirm('Are you sure you wish to delete this item?') ? confirmMethod() : CancelMethod()
 
-//Plain Redirect
+//Plain Page Redirect
 window.location.href='https://myUrl.com'
+
+//Local Storage get and set array value
+var names = [];
+names[0] = 'Suman';
+localStorage.setItem("names", JSON.stringify(names));
+var storedNames = JSON.parse(localStorage.getItem("names"));
 
