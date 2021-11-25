@@ -26,6 +26,14 @@ let allUser=this.state.allUserTypedColl;
 let allListItem:any=this.state.allListItems;
 var filteredArray=allUser.filter(item1 => allListItem.find(item2 => item1 === item2))
 
+//Sort Array
+const list = [
+  { color: 'white', size: 'XXL' },
+  { color: 'red', size: 'XL' },
+  { color: 'black', size: 'M' }
+]
+list.sort((a, b) => (a.color > b.color) ? 1 : -1)
+
 //Ternary Operators
 {this.state.components== 'Item1' ? <Item1Component/> : <Item2Component/>}
 
