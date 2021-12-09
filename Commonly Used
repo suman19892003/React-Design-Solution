@@ -109,3 +109,10 @@ names[0] = 'Suman';
 localStorage.setItem("names", JSON.stringify(names));
 var storedNames = JSON.parse(localStorage.getItem("names"));
 
+//Dynamic link to or mailto
+<a href={`mailto:${this.props.email}`}>email</a>
+or
+<a href={"mailto:" + this.props.email}>email</a>
+
+
+
