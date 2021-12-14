@@ -115,4 +115,11 @@ or
 <a href={"mailto:" + this.props.email}>email</a>
 
 
+//Repeat or foreach iteration in React JS
+[...Array(5)].map((elementInArray, index) => ( //For iterating to 5 times
+    <div key={index}>
+      Text in Loop
+    </div>
+))
+
 
