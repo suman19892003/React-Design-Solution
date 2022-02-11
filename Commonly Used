@@ -69,6 +69,23 @@ var array = [...this.state.people]; // make a separate copy of the array
     this.setState({people: array});
   }
   
+//Remove array from multidimensional Array
+cars = [{text:"test",
+			data:[{text:"test1",
+               data:[{text:"test1.1",data:[]}]
+              },
+              {text:"test2",
+              data:[{text:"test2.1",data:[]}]
+              }]
+             }];
+for(var i = 0; i <= cars.length - 1; i++){
+   for(var k = 0; k <= cars[i].data.length - 1; k++){
+    if(cars[i].data[k].text == "test1"){
+        cars[i].data.splice(k--,1); // It will remove test1 array from cars array
+    }
+  }
+}
+  
 //clear or Empty an array
 var ar = [1, 2, 3, 4, 5, 6];
 ar.length = 0; // Output []
