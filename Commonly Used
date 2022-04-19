@@ -12,7 +12,7 @@ this.setState({AllItemsToDisplayUnique: this.state.AllItemsToDisplay.filter((val
    console.log(this.state.AllItemsToDisplayUnique)
 })
 
-//Filter Unique Values in Array 2nd approach
+//Filter Unique Values in Array 2nd approach(one dimension array)
 var images = [{"id": 1,"tag": "people"}, {"id": 2,"tag": "places"}, {"id": 3,"tag": "places"}]
 const uniqueTags = [];
   res.map(img => {
@@ -20,6 +20,24 @@ const uniqueTags = [];
      uniqueTags.push(img.tag)
   }
   });
+  
+//Filter Unique Values in multidimensional Array approach(multi dimension array) or remove duplicates from array
+var images = [{"id": 1,"tag": "people"}, {"id": 2,"tag": "places"}, {"id": 3,"tag": "places"}, {"id": 4,"tag": "places"}]
+const uniqueTags = [];
+  images.map(img => {
+	  if (!isItemInArray(uniqueTags, img.tag)) {
+	   uniqueTags.push(img)
+	  }
+  });
+  
+  isItemInArray=(array, item)=>{
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].tag == item) {
+            return true;   // Found it
+        }
+    }
+    return false;   // Not found
+}
 
 //Filter Unique Value between two array
 let allUser=this.state.allUserTypedColl;
