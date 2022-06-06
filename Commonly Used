@@ -157,4 +157,18 @@ or
     </div>
 ))
 
-
+//Check null or empty in Javascript
+You can just check if the variable has a value or not. Meaning,
+if( myVariable ) {
+//mayVariable is not :
+//null
+//undefined
+//NaN
+//empty string ("")
+//0
+//false
+}
+If you do not know whether a variable exists (that means, if it was declared) you should check with the typeof operator. e.g.
+if( typeof myVariable !== 'undefined' ) {
+    // myVariable will get resolved and it is defined
+}
