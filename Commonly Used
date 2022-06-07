@@ -172,3 +172,7 @@ If you do not know whether a variable exists (that means, if it was declared) yo
 if( typeof myVariable !== 'undefined' ) {
     // myVariable will get resolved and it is defined
 }
+
+Difference between split and splice?
+
+
