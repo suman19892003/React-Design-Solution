@@ -174,5 +174,9 @@ if( typeof myVariable !== 'undefined' ) {
 }
 
 Difference between split and splice?
+Slice() is used to extract elements from an array and return a new array, and it would not modify the origin array. 
+Split() is used to convert the input string into an array by the separator, and since string is immutable, it would not modify the origin string.
 
+Difference between split and splice and slice?
+Split() method is used for strings array, slice() method is used for both arrays and strings. Splice() method is used for only arrays.
 
