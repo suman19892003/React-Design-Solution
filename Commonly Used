@@ -179,4 +179,15 @@ Split() is used to convert the input string into an array by the separator, and 
 
 Difference between split and splice and slice?
 Split() method is used for strings array, slice() method is used for both arrays and strings. Splice() method is used for only arrays.
+Example
+var a=['j','u','r','g','e','n'];
+
+// array.slice(startIndex, endIndex)
+a.slice(2,3);
+// => ["r"]
+
+//array.splice(startIndex, deleteCount)
+a.splice(2,3);
+// => ["r","g","e"]
+
 
